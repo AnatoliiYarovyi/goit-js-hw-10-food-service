@@ -16,6 +16,7 @@ body {
     background-color 150ms var(--timing-function);
 }
 
+
 body.light-theme {
   background-color: #fff;
   color: #333333;
