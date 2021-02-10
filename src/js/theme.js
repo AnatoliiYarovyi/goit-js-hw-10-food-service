@@ -5,7 +5,7 @@ const Theme = {
     DARK: 'dark-theme',
   };
 const handleClick = () => {
-    localStorage.setItem('themeControlRef', themeControlRef.checked);
+    localStorage.setItem('themeDarkNow', themeControlRef.checked);
     localStorage.setItem('theme', bodyRef.className);
 };
 const addTheme = () => {
@@ -20,8 +20,8 @@ const addTheme = () => {
 }
 
 const firstTheme = () => {
-    let darkTheme = localStorage.getItem('themeControlRef')
-    if (JSON.parse(darkTheme)) {
+    let darkTheme = JSON.parse(localStorage.getItem('themeDarkNow'))
+    if (darkTheme) {
         themeControlRef.checked = true;
         return Theme.DARK
     } else {
